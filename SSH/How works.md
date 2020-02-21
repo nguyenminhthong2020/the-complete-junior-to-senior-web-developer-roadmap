@@ -7,7 +7,8 @@ The symmetrical encription technique, works through sharing only a decrypt/encry
 ## Asymmetrical Encryption
 
 This technique works through, 2 decrypt keys and 2 encrypt keys, the encrypt keys are shared through client-server communication, they keep they respective decrypt key and share they encrypt key, then when the communication happen, they encrypt the data with the other machine key they receveid and send this data, the other machine receive the encrypted data, and decrypt with his unique decrypt key, and vice-versa.
-__Diffie Hellman__ best explanation:https://youtu.be/Yjrfm_oRO0w
+
+__Diffie Hellman algorithm__ best explanation:https://youtu.be/Yjrfm_oRO0w
 
 ## Hashing
 
@@ -19,3 +20,6 @@ It's like bcrypt, one way encryption, impossible to go back once encrypted. Like
 - Arrive at symmetric key
 - Make sure of no funny business
 - Authenticate User
+
+### SSH on github (Windows)
+https://github.com/antonykidis/Setup-ssh-for-github/blob/master/Setup-ssh-on-github.pdf
