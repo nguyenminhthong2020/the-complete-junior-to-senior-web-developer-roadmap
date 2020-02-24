@@ -29,7 +29,8 @@ CSS => Only load whatever is needed.
 JS => there are 3 ways to use import js
     normal, when It can block the DOM to execute the script
 
-    script async, when it download in a low priority but cant block the DOM parsing, but we cant control when it gonna execute and this can make some errors, it's good to use when it's a script that dont manipulate de DOM.
+    script async, when it download in a low priority but cant block the DOM parsing, but we cant control when 
+    it gonna execute and this can make some errors, it's good to use when it's a script that dont manipulate de DOM.
 
     script defer, it will not block the DOM parsing but it gonna wait when the html complete parse and then execute.
 
