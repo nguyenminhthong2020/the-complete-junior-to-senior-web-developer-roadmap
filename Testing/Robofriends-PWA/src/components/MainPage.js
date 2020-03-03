@@ -4,7 +4,7 @@ import Searchbox from '../components/SearchBox';
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 
-import "./App.css";
+import "../containers/App.css";
 
 class MainPage extends Component {
 
@@ -12,21 +12,21 @@ class MainPage extends Component {
         this.props.onRequestRobots();
     }
 
-    render() {
-        const {searchField, onSearchChange, robots, isPending   } = this.props;
-        const filteredRobots = robots.filter(robots => {
-            return robots.name.toLowerCase().includes(searchField.toLowerCase());
+    filterRobots = () => {
+        return this.props.robots.filter(robots => {
+            return robots.name.toLowerCase().includes(this.props.searchField.toLowerCase());
         })
+    }
+    render() {
+        const { onSearchChange, robots, isPending   } = this.props;
 
-        return isPending ?
-        <h1>Loading</h1> :
-            (
+        return (
                 <div className="tc">
                     <h1>Robofriends</h1>
                     <Searchbox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundry>
-                            <CardList robots={filteredRobots} />
+                            <CardList robots={this.filterRobots()} />
                         </ErrorBoundry>
                     </Scroll>
                 </div>

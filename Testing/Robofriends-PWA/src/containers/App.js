@@ -29,7 +29,9 @@ class App extends Component {
     }
 
     render() {
+        return(
         <MainPage {...this.props}/>
+        )
     }
 }
 
