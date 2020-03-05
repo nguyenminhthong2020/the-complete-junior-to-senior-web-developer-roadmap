@@ -1,0 +1,30 @@
+## React server side rendering
+
+react can render on the server side with 'react-dom/server',
+and there's pros and cons of using server side rendering
+
+### CSR
+
+Pros
+    - Rich interations
+    - Faster Response
+    - Web Applications
+
+Cons
+    - Low Seo Potencial
+    - Longer Initial Load
+
+### SSR
+
+Pros
+    - Static Sites
+    - Seo
+    - Initial Page Load
+
+Cons
+    - Full Page Reloads
+    - Slower Page rendering
+    # Requests to server
+
+
+For server side rendering, peopple use Next.js(dynamic) or Gatsby(static).
